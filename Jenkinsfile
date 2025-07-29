@@ -10,7 +10,6 @@ pipeline {
             checkout scm
           }
     }
-  }
     stage('dependency') {
       steps {
         bash 'npm install'
@@ -21,4 +20,5 @@ pipeline {
         bash 'npm run build'
       }
     }
+}
 }
