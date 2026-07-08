@@ -1,8 +1,8 @@
-FROM node:12.2
+FROM node:18-alpine
 
 ENV HOME=/home/app
 
-RUN apt-get update
+RUN apt-get update && apt-get install htop
 
 COPY package.json package-lock.json $HOME/node_docker/
 
