@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 ENV HOME=/home/app
 
-RUN apt-get update && apt-get install htop
+RUN apk add --no-cache htop
 
 COPY package.json package-lock.json $HOME/node_docker/
 
